@@ -13,12 +13,13 @@
         <div class="logo">
             <span class="bold">Charly Castre</span> <span class="regular"> Diseñador</span>
         </div>
+        <input type="checkbox" id="menu-bar"
+        <label for="menu-bar" class="burger-btn">☰</label>
         <ul class="nav-links">
             <li><a href="#perfil">Perfil</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <button id="menu-bar" class="burger-btn">☰</button>
         </nav>
 
     <header class="hero-carousel">
@@ -51,7 +52,7 @@
     </section>
 
     <footer id="contacto">
-        <p>&copy; 2026 | &#64;Charly Castre</p>
+        <p>&copy; 2026 | Charly Castre</p>
     </footer>
 
 </body>
@@ -165,20 +166,8 @@ h2 { margin-bottom: 2rem; color: var(--color-cielo); font-weight: 700; }
     border: 1px solid rgba(0,0,0,0.03);
 }
 
-.project-card {
-    height: 350px;
-    background: white;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--color-texto);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra suave */
-    transition: all 0.4s ease;
-    border: 1px solid rgba(0,0,0,0.03);
-}
 .project-card:hover {
+    transform: translateY (-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     background: linear-gradient(
         rgba(215, 238, 249, 0.4),
