@@ -44,7 +44,7 @@
     <section id="proyectos" class="container">
         <h2>Proyectos</h2>
         <div class="grid-projects">
-            <a href="proyecto1.html" class="project-card"><span>Proyecto 1</span></a>
+            <a href="proyecto1.html" class="project-card1"><span>Proyecto 1</span></a>
             <a href="proyecto2.html" class="project-card"><span>Proyecto 2</span></a>
             <a href="proyecto3.html" class="project-card"><span>Proyecto 3</span></a>
             <a href="proyecto4.html" class="project-card"><span>Proyecto 4</span></a>
@@ -132,7 +132,7 @@ body {
 
 /* Secciones */
 .container { padding: 80px 10%; text-align: center; }
-h2 { margin-bottom: 2rem; color: var(--color-bosque); font-weight: 700; }
+h2 { margin-bottom: 2rem; color: var(--color-cielo); font-weight: 700; }
 
 .perfil-content { max-width: 700px; margin: 0 auto; text-align: left; color: var(--color-tierra); }
 
@@ -141,6 +141,29 @@ h2 { margin-bottom: 2rem; color: var(--color-bosque); font-weight: 700; }
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+}
+
+.project-card1 {
+    height: 350px;
+ background: linear-gradient(
+        rgba(44, 95, 120, 0.8), /* Azul "Mar" con 80% de opacidad */
+        rgba(44, 95, 120, 0.8)
+      ), 
+      url('https://plus.unsplash.com/premium_photo-1726873328193-2fcde532707f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Cambiamos el texto a blanco para que resalte */
+    border: none;
+    transition: 0.5s ease;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-texto);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.03);
 }
 
 .project-card {
@@ -156,7 +179,6 @@ h2 { margin-bottom: 2rem; color: var(--color-bosque); font-weight: 700; }
     transition: all 0.4s ease;
     border: 1px solid rgba(0,0,0,0.03);
 }
-
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
@@ -180,5 +202,7 @@ h2 { margin-bottom: 2rem; color: var(--color-bosque); font-weight: 700; }
 
 footer { padding: 40px; background: var(--color-bosque); color: white; text-align: center; }
 footer a { color: #fff; text-decoration: none; border: 1px solid #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
-</style>order-radius: 20px; font-size: 0.8rem; }
+
+
+
 </style>
