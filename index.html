@@ -1,0 +1,184 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charly Castre | Diseñador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="bold">Charly Castre</span> <span class="regular">- Diseñador</span>
+        </div>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="burger-btn">☰</label>
+        <ul class="nav-links">
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-carousel">
+        <div class="carousel-track">
+            <img src="https://plus.unsplash.com/premium_photo-1661301026318-2ceafb57b0ec?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <img src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?q=80&w=1200" alt="Packaging Design">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200" alt="Branding">
+        </div>
+        <div class="hero-overlay">
+            <h1>Creatividad Estructural & Visual</h1>
+        </div>
+    </header>
+
+    <section id="perfil" class="container">
+        <h2>Perfil</h2>
+        <div class="perfil-content">
+            <p>Desde el <strong>2015</strong>, he trazado un camino en el mundo visual desde la sultana del norte, <strong>Monterrey, NL</strong>. Mi enfoque combina la precisión del diseño comercial con la tangibilidad del empaque y el mundo editorial.</p>
+            <p>Con experiencia en Branding, Diseño Web y Estructura de Empaque, ayudo a empresas y clientes locales a materializar ideas en soluciones funcionales y estéticas que conectan con las personas.</p>
+        </div>
+    </section>
+
+    <section id="proyectos" class="container">
+        <h2>Proyectos</h2>
+        <div class="grid-projects">
+            <a href="proyecto1.html" class="project-card"><span>Proyecto 1</span></a>
+            <a href="proyecto2.html" class="project-card"><span>Proyecto 2</span></a>
+            <a href="proyecto3.html" class="project-card"><span>Proyecto 3</span></a>
+            <a href="proyecto4.html" class="project-card"><span>Proyecto 4</span></a>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>&copy; 2026 | Charly Castre</p>
+        <a href="https://instagram.com/" target="_blank">Instagram</a>
+    </footer>
+
+</body>
+</html>
+<style>:root {
+    --color-tierra: #8D775F;
+    --color-mar: #2C5F78;
+    --color-bosque: #4A5D4E;
+    --color-cielo: #F0F4F8;
+    --color-texto: #333333;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-cielo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Tipografías */
+.bold { font-weight: 700; }
+.regular { font-weight: 400; }
+
+/* Navbar tipo Apple */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Efecto Apple */
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 5%;
+    z-index: 2000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-links { display: flex; list-style: none; }
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-texto);
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: var(--color-mar); }
+
+/* Carrusel Animado */
+.hero-carousel {
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: 70px;
+}
+
+.carousel-track {
+    display: flex;
+    width: 300%;
+    animation: slide 15s infinite ease-in-out;
+}
+
+.carousel-track img {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100vw); }
+    66% { transform: translateX(-200vw); }
+    100% { transform: translateX(0); }
+}
+
+/* Secciones */
+.container { padding: 80px 10%; text-align: center; }
+h2 { margin-bottom: 2rem; color: var(--color-bosque); font-weight: 700; }
+
+.perfil-content { max-width: 700px; margin: 0 auto; text-align: left; color: var(--color-tierra); }
+
+/* Grid de Proyectos con degradados suaves */
+.grid-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    height: 350px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-texto);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+}
+
+/* Burger Menu */
+#menu-bar { display: none; }
+.burger-btn { display: none; cursor: pointer; font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+    .burger-btn { display: block; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; width: 100%;
+        background: white; flex-direction: column; padding: 20px;
+    }
+    #menu-bar:checked ~ .nav-links { display: flex; }
+}
+
+footer { padding: 40px; background: var(--color-bosque); color: white; text-align: center; }
+footer a { color: #fff; text-decoration: none; border: 1px solid #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+</style>order-radius: 20px; font-size: 0.8rem; }
+</style>
